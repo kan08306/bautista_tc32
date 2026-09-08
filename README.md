@@ -16,8 +16,6 @@
   </p>
 </div>
 
-![Repository views](Template)
-
 ---
 
 ## Table of Contents
