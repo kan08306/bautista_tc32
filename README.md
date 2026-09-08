@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://github.com/kan08306">
-    <img src="./Views/file_template/assets/kblogo.png" alt="KB Logo" width="130">
+    <img src="./app/Views/file_template/assets/kblogo.png" alt="KB Logo" width="130">
   </a>
 
   <h1>Web System Technologies Activities</h1>
