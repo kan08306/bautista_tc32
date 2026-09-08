@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://github.com/kan08306">
-    <img src="./file_template/assets/kblogo.png" alt="KB Logo" width="130">
+    <img src="./Views/file_template/assets/kblogo.png" alt="KB Logo" width="130">
   </a>
 
   <h1>Web System Technologies Activities</h1>
@@ -16,7 +16,7 @@
   </p>
 </div>
 
-![Repository views](https://visit-counter.vercel.app/counter.png?page=kan08306/bautista_tc32)
+![Repository views](Template)
 
 ---
 
