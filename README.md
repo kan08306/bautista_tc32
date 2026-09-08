@@ -1,69 +1,178 @@
-# CodeIgniter 4 Application Starter
+<a id="readme-top"></a>
 
-## What is CodeIgniter?
+<div align="center">
+  <a href="https://github.com/kan08306">
+    <img src="./file_template/assets/kblogo.png" alt="KB Logo" width="130">
+  </a>
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+  <h1>Web System Technologies Activities</h1>
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+  <p>
+    A semester portfolio of my CodeIgniter 4 activities, exercises, and projects.
+  </p>
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+  <p>
+    <a href="https://github.com/kan08306/bautista_tc32"><strong>View Repository</strong></a>
+  </p>
+</div>
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+![Repository views](https://visit-counter.vercel.app/counter.png?page=kan08306/bautista_tc32)
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## Table of Contents
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- [Overview](#overview)
+- [Activities](#activities)
+- [Technology](#technology)
+- [Project Structure](#project-structure)
+- [Local Installation](#local-installation)
+- [Running the Project](#running-the-project)
+- [Development Guidelines](#development-guidelines)
+- [Resources](#resources)
 
-## Setup
+## Overview
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+This repository contains my activities for **Web System Technologies**. It uses CodeIgniter 4 and follows the Model-View-Controller (MVC) architecture.
 
-## Important Change with index.php
+The project will serve as a central portfolio throughout the semester. Each activity has its own route, controller, view folder, and related assets when needed.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Activities
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+| Activity | Description | Local Route | Source Code |
+|---|---|---|---|
+| Folder Template | Initial CodeIgniter view and routing exercise | `/folder-template` | [View files](./app/Views/folder_template/) |
+| Activity 2 | To be added | `/activity2` | To be added |
+| Activity 3 | To be added | `/activity3` | To be added |
 
-**Please** read the user guide for a better explanation of how CI4 works!
+> CodeIgniter uses PHP and must run on a PHP server. The local routes work after starting the development server. GitHub stores the source code but does not execute the PHP application through GitHub Pages.
 
-## Repository Management
+## Technology
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Project Structure
 
-## Server Requirements
+```text
+bautista_tc32/
+├── app/
+│   ├── Config/
+│   │   └── Routes.php
+│   ├── Controllers/
+│   │   └── FolderTemplate.php
+│   ├── Models/
+│   └── Views/
+│       └── folder_template/
+│           └── index.php
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── js/
+│   └── index.php
+├── writable/
+├── composer.json
+├── composer.lock
+└── spark
+```
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+### File locations
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+| Content | Location |
+|---|---|
+| Page templates | `app/Views/` |
+| Request-handling code | `app/Controllers/` |
+| Database models | `app/Models/` |
+| URL routes | `app/Config/Routes.php` |
+| CSS | `public/assets/css/` |
+| JavaScript | `public/assets/js/` |
+| Images | `public/assets/images/` |
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+## Local Installation
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Requirements
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- PHP 8.2 or newer
+- Composer 2
+- XAMPP or another PHP environment
+- Enabled PHP extensions: `curl`, `gd`, `intl`, `mbstring`, and `zip`
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kan08306/bautista_tc32.git
+cd bautista_tc32
+```
+
+Install the Composer dependencies:
+
+```bash
+composer install
+```
+
+Create the local environment file:
+
+```powershell
+Copy-Item env .env
+```
+
+Configure `.env` for local development:
+
+```ini
+CI_ENVIRONMENT = development
+app.baseURL = 'http://localhost:8080/'
+```
+
+> The `.env` file and local credentials must not be committed to GitHub.
+
+## Running the Project
+
+Start the CodeIgniter development server:
+
+```bash
+php spark serve
+```
+
+Open the application at:
+
+```text
+http://localhost:8080/
+```
+
+Example activity:
+
+```text
+http://localhost:8080/folder-template
+```
+
+Stop the server by pressing `Ctrl+C` in the terminal.
+
+## Development Guidelines
+
+- Follow CodeIgniter's MVC structure.
+- Create views under `app/Views/`.
+- Use controllers to load views and handle requests.
+- Register activity URLs in `app/Config/Routes.php`.
+- Store browser-accessible assets under `public/assets/`.
+- Keep one central `public/index.php`; do not create another one for each activity.
+- Do not commit `.env`, credentials, logs, cache data, or the `vendor/` directory.
+- Test activities locally before committing and pushing changes.
+- Update the Activities table whenever a new activity is added.
+
+## Resources
+
+| Resource | Purpose | Link |
+|---|---|---|
+| Repository | Semester source-code portfolio | [bautista_tc32](https://github.com/kan08306/bautista_tc32) |
+| CodeIgniter User Guide | Framework documentation | [CodeIgniter 4 User Guide](https://codeigniter.com/user_guide/) |
+| Composer | PHP dependency management | [Composer](https://getcomposer.org/) |
+| PHP Manual | PHP language documentation | [PHP Manual](https://www.php.net/manual/en/) |
+
+<p align="right"><a href="#readme-top">Back to top</a></p>
